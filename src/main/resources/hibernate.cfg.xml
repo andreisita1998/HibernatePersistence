@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configurare conexiune la baza de date -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/testa?useSSL=false&amp;serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password"> </property>
+
+        <!-- Configurare dialect pentru baza de date -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <!-- Configurare strategie de generare a id-urilor -->
+        <property name="hibernate.id.new_generator_mappings">false</property>
+
+        <!-- Configurare mapping-ul clasei Employees -->
+        <mapping class="Employees"/>
+
+    </session-factory>
+</hibernate-configuration>
